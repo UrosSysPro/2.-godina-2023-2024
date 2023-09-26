@@ -1,0 +1,21 @@
+table{
+    display: block;
+}
+th{
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    background-color: crimson;
+}
+td{
+    display: inline-block;
+    width: 120px;
+    /* background-color: lime; */
+    text-align: center;
+}
+.par{
+    background-color: greenyellow;
+}
+.nepar{
+    background-color: green;
+}
