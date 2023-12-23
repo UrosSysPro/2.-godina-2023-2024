@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+#red{
+    height: 400px;
+    display: flex;
+}
+.pola{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#slika{
+    height: 300px;
+    width: 300px;
+}
+#naslov{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+#paragraf{
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+#linkovi{
+    padding-top: 30px;
+    display: flex;
+}
+#link1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    display: block;
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+#link2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    display: block;
+    color: blueviolet;
+    font-size: 20px;
+    padding: 10px 20px;
+}

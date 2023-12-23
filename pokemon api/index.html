@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            Pokemon api
+        </title>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    </head>
+    <body class="flex flex-col bg-blue-600">
+        <div class="flex items-center justify-center py-3">
+            <input type="text" id="name" class="px-6 py-3 rounded-xl shadow-2xl">
+            <button id="search" class="px-6 py-3 rounded-xl shadow-2xl bg-blue-800 text-white ml-3">
+                Search
+            </button>
+        </div>
+        
+        <div class="flex items-center justify-center">
+            <div id="pokemonDiv"></div>
+        </div>
+
+        <script>
+            var search=document.getElementById("search");
+            search.addEventListener("click",click);
+
+
+            function click(){
+                var name=document.getElementById("name");
+                var pokemonName=name.value;
+
+                var url=`https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+
+                var request=new XMLHttpRequest();
+                request.open("GET",url);
+                request.onreadystatechange=function(){
+                    if(this.readyState==4 && this.status==200){
+                        displayPokemon(this.responseText)
+                    }
+                    if(this.readyState==4 && this.status!=200){
+                        displayError(this.responseText)
+                    }
+                };
+                request.send();
+            }
+            function displayPokemon(pokemonText){
+                var pokemon=JSON.parse(pokemonText);
+                console.log(pokemon.sprites.front_default);
+                console.log(pokemon.sprites.back_default);
+
+                var div=document.getElementById("pokemonDiv");
+                div.innerHTML=`
+                    <div class="flex">
+                        <img src="${pokemon.sprites.front_default}">
+                        <img src="${pokemon.sprites.back_default}">
+                    </div>
+                    <span>${pokemon.name}</span>
+                    <div class="w-[100px] h-[20px] bg-gray-500">
+                        <div class="h-full w-[${pokemon.base_experience/4}%] bg-green-500">
+                        </div>
+                    </div>
+                `;
+            }
+            function displayError(error){
+                var div=document.getElementById("pokemonDiv");
+                div.innerHTML=error;
+            }
+        </script>
+    </body>
+</html>
