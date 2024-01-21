@@ -53,4 +53,4 @@ function fade(){
     brush.fill();
 }
 
-setInterval(fade,1000/60);
+// setInterval(fade,1000/60);
