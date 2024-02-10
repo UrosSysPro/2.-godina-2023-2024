@@ -8,28 +8,57 @@
     <body class="flex justify-center items-center h-screen">
         <div id="console" class="w-[800px] h-[400px] flex shadow-md rounded-[50px] overflow-none">
             <div class="h-full w-[150px] bg-red-500 rounded-l-[50px]">
-                <div id="key-w" class="rounded-full p-6 bg-blue-500 w-fit">
-                    <i class="fa-solid fa-chevron-up"></i>
+                <div class="h-10"></div>
+
+                <div class="p-3">
+                    <div class="w-full aspect-square relative">
+                        <div id="key-w" class="rounded-full w-10 h-10 flex items-center justify-center bg-black text-white absolute top-0 left-1/2 -translate-x-1/2">
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </div>
+                        <div id="key-s" class="rounded-full w-10 h-10 flex items-center justify-center bg-black text-white absolute bottom-0 left-1/2 -translate-x-1/2">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div id="key-a" class="rounded-full w-10 h-10 flex items-center justify-center bg-black text-white absolute left-0 top-1/2 -translate-y-1/2">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div id="key-d" class="rounded-full w-10 h-10 flex items-center justify-center bg-black text-white absolute right-0 top-1/2 -translate-y-1/2">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
                 </div>
-                <div id="key-s" class="rounded-full p-6 bg-blue-500  w-fit">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div id="key-a" class="rounded-full p-6 bg-blue-500 w-fit">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </div>
-                <div id="key-d" class="rounded-full p-6 bg-blue-500 w-fit">
-                    <i class="fa-solid fa-chevron-right"></i>
+                <div class="h-10"></div>
+                <div class="relative aspect-square">
+                    <div id="analog1" class=""></div>
                 </div>
             </div>
-            <div class="flex-1 bg-black">
-
+            <div class="flex-1 bg-black px-6 py-6">
+                <canvas class="w-full h-full"></canvas>
             </div>
             <div class="h-full w-[150px] bg-green-500 rounded-r-[50px]">
+                <div class="h-52"></div>
 
+                <div class="p-3">
+                    <div class="w-full aspect-square relative">
+                        <div id="key-w" class="rounded-full w-10 h-10 flex items-center justify-center bg-black text-white absolute top-0 left-1/2 -translate-x-1/2">
+                            <i class="fa-regular fa-circle"></i>
+                        </div>
+                        <div id="key-s" class="rounded-full w-10 h-10 flex items-center justify-center bg-black text-white absolute bottom-0 left-1/2 -translate-x-1/2">
+                            <i class="fa-regular fa-square"></i>
+                        </div>
+                        <div id="key-a" class="rounded-full w-10 h-10 flex items-center justify-center bg-black text-white absolute left-0 top-1/2 -translate-y-1/2">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <div id="key-d" class="rounded-full w-10 h-10 flex items-center justify-center bg-black text-white absolute right-0 top-1/2 -translate-y-1/2">
+                            A
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="draggable absolute top-0 left-0 bg-blue-500 w-[100px] h-[100px]"></div>
+        <div class="draggable absolute top-0 left-0 bg-blue-500 w-[100px] h-[100px] flex justify-center items-center p-3">
+            <img src="nyan.png" alt="">
+        </div> 
 
         <script src="script.js"></script>
     </body>
