@@ -1,12 +1,20 @@
 <html>
-  <head> </head>
+  <head> 
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
   <body>
+    <header>
 
-    <div id="messages">
+    </header>
+    <nav>
 
-    </div>
-    <input type="text" id="text">
-    <button id="send">send</button>
+    </nav>
+    <main>
+      <button id="signin"> sign in</button>
+    </main>
+    <footer>
+
+    </footer>
 
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
@@ -15,8 +23,13 @@
         getFirestore,
         collection,
         addDoc,
-        doc,onSnapshot
+        doc,
+        onSnapshot,
       } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+      
+      import { GoogleAuthProvider } from "firebase/auth";
+      const provider = new GoogleAuthProvider();
+      console.log(provider);
 
       const firebaseConfig = {
         apiKey: "AIzaSyCCEUPkpRIOLHN7k8EeXsO1BWw2ZwNUWe0",
@@ -29,33 +42,12 @@
 
       const app = initializeApp(firebaseConfig);
       const db = getFirestore(app);
+      const auth = getAuth(app);
 
-      const messages=collection(db,"messages");
-      onSnapshot(messages,(allMessages)=>{
-        var messagesDiv=document.getElementById("messages");
-        messagesDiv.innerHTML="";
-        allMessages.forEach((message)=>{
-            messagesDiv.innerHTML+=`
-                <div>${message.data().text}</div>
-            `;
-        })
-      })
+      var button=document.getElementById('signin');
+      button.addEventListener('click',()=>{
 
-      var button=document.getElementById('send');
-      button.addEventListener('click',send);
-
-      function send(){
-        var text=document.getElementById("text").value;
-        addDoc(messages,{
-            text:text
-        }).then(onSuccess).catch();
-      }
-      function onSuccess(){
-        console.log("message sent");
-      }
-      function onError(){
-        console.log("error sending message");
-      }
+      });
     </script>
   </body>
 </html>
