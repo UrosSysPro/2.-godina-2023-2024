@@ -3,21 +3,28 @@
 	<title>
 		Pixel art editor
 	</title>
+	<style>
+		.color{
+			width:20px;
+			height: 20px;
+		}
+	</style>
 </head>
 	<body>
 		<canvas onclick="click(event)"></canvas>
 		<div id="side-panel">
 			<div id="tools">
-				<button>pen</button>
-				<button>fill bucket</button>
-				<button>rectangle</button>
-				<button>eraser</button>
+				<button onclick="selectTool(0)">pen</button>
+				<button onclick="selectTool(1)">fill bucket</button>
+				<button onclick="selectTool(2)">rectangle</button>
+				<button onclick="selectTool(3)">eraser</button>
 			</div>
 			<div id="palete">
-				<div class="color"></div>
-				<div class="color"></div>
-				<div class="color"></div>
-				<div class="color"></div>
+				<div class="color" style="background-color: black;" onclick="selectedColor=0"></div>
+				<div class="color" style="background-color: white;" onclick="selectedColor=1"></div>
+				<div class="color" style="background-color: red;" onclick="selectedColor=2"></div>
+				<div class="color" style="background-color: green;" onclick="selectedColor=3"></div>
+				<div class="color" style="background-color: blue;" onclick="selectedColor=4"></div>
 			</div>
 		</div>
 		<script src="script.js"></script>

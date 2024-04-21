@@ -1,9 +1,8 @@
+var dugme=document.getElementById('dugme');
+dugme.addEventListener('click',click);
 
-var niz=[];
-for(var i=0;i<10;i++){
-	niz.push([]);
-	for(var j=0;j<10;j++){
-		niz[i].push(i);
-	}
+function click(){
+	var div=document.getElementById('kvadrat');
+	console.log(div);
+	div.style.backgroundColor='blue';
 }
-console.log(niz);
