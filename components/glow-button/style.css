@@ -1,0 +1,74 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #313131;
+}
+
+button{
+	box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.1);
+	overflow: hidden;
+	position: relative;
+	padding-top: 30px;
+	padding-left: 30px;
+	border: none;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	height: 200px;
+	background-color: #00154C;
+	justify-content: start;
+	align-items: start;
+	text-align: left;
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	font-family: 'Helvatica' sans-serif;
+	transition: 300ms;
+}
+#button-background{
+	position: absolute;
+	inset: 5px;
+	background-color: #313131;
+	border-radius: 15px;
+}
+#button-content{
+	pointer-events: none;
+	position: absolute;
+}
+button:hover{
+	background-color: #11256e;
+}
+#glow{
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 300ms;
+	transition: top 0ms;
+	transition: left 0ms;
+	transition: scale 100ms;
+	border-radius: 50%;
+	filter: blur(100px);
+	background-color: #d47;
+	width: 400px;
+	height: 400px;
+	scale: 0;
+}
+button:hover #glow{
+	transition: scale 300ms ease-in;
+	scale: 1;
+}
+svg{
+	display: block;
+	width: 50px;
+	color: white;
+}
