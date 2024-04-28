@@ -5,5 +5,59 @@
 }
 
 body{
-	
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#drag-and-drop{
+	width: 800px;
+	height: 600px;
+	border: 2px solid yellowgreen;
+	border-radius: 20px;
+	position: relative;
+/*	display: grid;*/
+/*	grid-template-columns: repeat(4, 1fr);*/
+/*	align-content: start;*/
+/*	gap: 10px;*/
+/*	padding: 10px;*/
+}
+.card{
+	width: 190px;
+	position: absolute;
+	height: 200px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.1);
+}
+.card>div{
+	top: 10px;
+	right: 10px;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: white;
+}
+.card>div>svg{
+	width: 30px;
+	height: 30px;
+}
+.red-card{
+	background-color: crimson;
+}
+.yellow-card{
+	background-color: yellowgreen;
+}
+.orange-card{
+	background-color: orangered;
+}
+.green-card{
+	background-color: darkgreen;
+}
+.blue-card{
+	background-color: paleturquoise;
+}
+.purple-card{
+	background-color: rebeccapurple;
+
 }
