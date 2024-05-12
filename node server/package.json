@@ -1,0 +1,15 @@
+{
+  "name": "express-server",
+  "version": "2.0.0",
+  "description": "js server napisan sa express",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
