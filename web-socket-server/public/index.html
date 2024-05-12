@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <div id="messages">
+
+        </div>
+        <input type="text" id="text">
+        <button id="send">Send</button>
+
+        <script>
+            var client=new WebSocket("ws://localhost:5000");
+            console.log("connected");
+
+            client.onmessage=function(event){
+                var div=document.getElementById("messages");
+                div.innerHTML+=event.data+"<br>";
+            }
+
+            client.onclose=function(){
+                console.log("server disconnected");
+            }
+
+            var button=document.getElementById("send");
+            button.addEventListener("click",function(){
+                var input=document.getElementById("text");
+                client.send(input.value);
+            })
+        </script>
+    </body>
+</html>
