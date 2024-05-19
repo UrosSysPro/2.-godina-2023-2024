@@ -1,21 +1,43 @@
 <html>
-    <head>
-        <title>
-            Scribble
-        </title>
-    </head>
-    <body>
-        <canvas></canvas>
-        <button onclick="setLineWidth(2)">1x</button>
-        <button onclick="setLineWidth(4)">2x</button>
-        <button onclick="setLineWidth(6)">3x</button>
-        <button onclick="setLineWidth(8)">4x</button>
+  <head>
+    <title>Scribble</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <canvas></canvas>
+    <div class="p-4 rounded-xl bg-green-200 shadow-md w-fit">
+      <div class="flex gap-3">
+        <button
+          class="bg-white flex items-center justify-center w-10 h-10 shadow-md rounded-xl"
+          onclick="setLineWidth(2)"
+        >
+          <div class="w-2 h-2 rounded-full bg-black"></div>
+        </button>
+        <button
+          class="bg-white flex items-center justify-center w-10 h-10 shadow-md rounded-xl"
+          onclick="setLineWidth(4)"
+        >
+          <div class="w-4 h-4 rounded-full bg-black"></div>
+        </button>
+        <button
+          class="bg-white flex items-center justify-center w-10 h-10 shadow-md rounded-xl"
+          onclick="setLineWidth(6)"
+        >
+          <div class="w-6 h-6 rounded-full bg-black"></div>
+        </button>
+        <button
+          class="bg-white flex items-center justify-center w-10 h-10 shadow-md rounded-xl"
+          onclick="setLineWidth(8)"
+        >
+          <div class="w-8 h-8 rounded-full bg-black"></div>
+        </button>
+      </div>
 
-        <button onclick="setColor('crimson')">red</button>
-        <button onclick="setColor('yellowgreen')">green</button>
-        <button onclick="setColor('blue')">blue</button>
-        <button onclick="setColor('tomato')">orange</button>
-
-        <script src="script.js"></script>
-    </body>
+      <button onclick="setColor('crimson')">red</button>
+      <button onclick="setColor('yellowgreen')">green</button>
+      <button onclick="setColor('blue')">blue</button>
+      <button onclick="setColor('tomato')">orange</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
